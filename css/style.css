@@ -1,6 +1,6 @@
 body{
     background-color: #007155;
-    color: antiquewhite;
+    color: rgb(38, 36, 34);
 }
 h1{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -63,4 +63,33 @@ iframe {
     flex-grow: 1; /* Takes up remaining 75% of the width */
     height: 100%; /* Adjusts height to fill container */
     border: none; /* Removes border */
+}
+
+
+.restaurant-item {
+  background: #fff; /* White background for cards */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  margin-bottom: 10px; /* Space between items */
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.restaurant-item:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Headings and paragraphs */
+.restaurant-item h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.restaurant-item p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
 }
