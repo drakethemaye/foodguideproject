@@ -42,3 +42,25 @@ h1{
   .nav-item a:visited{
     color: #538861;
   }
+
+  .content-container {
+    display: flex;
+    height: calc(100vh - 100px); /* Adjust height to fit the viewport minus any header/nav height */
+    gap: 10px; /* Add space between the list and iframe */
+}
+
+/* Style for the left list */
+.left-list {
+    width: 25%; /* Takes up 25% of the width */
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 20px; /* Add some padding */
+    overflow-y: auto; /* Make it scrollable if content overflows */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Style for the iframe */
+iframe {
+    flex-grow: 1; /* Takes up remaining 75% of the width */
+    height: 100%; /* Adjusts height to fill container */
+    border: none; /* Removes border */
+}
