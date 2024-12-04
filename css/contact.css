@@ -1,10 +1,8 @@
 body{
     background-color: #007155;
     color: rgb(38, 36, 34);
-}
-h1{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #FFD416
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFD416
 }
   /*Navigation Bar*/
   .nav-container{
@@ -42,3 +40,76 @@ h1{
   .nav-item a:visited{
     color: #538861;
   }
+
+  /* General styling for the contact section */
+.contact-section {
+  background-color: #007155;
+  padding: 50px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #FFD416
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Contact form styles */
+#contact-header{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #FFD416 
+}
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #007155;
+}
+
