@@ -1,4 +1,21 @@
-h1{
+body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #FFD416
-  }
+}
+#team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#sponsors-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+#team-heading{
+    text-align: center;
+}
