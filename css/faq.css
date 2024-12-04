@@ -1,47 +1,44 @@
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #FFD416
-}
-    background-color: #007155;
-    color: rgb(38, 36, 34);
+  background-color: #007155;
+  color: rgb(38, 36, 34);
 }
 h1{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #FFD416
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: #FFD416
 }
-  /*Navigation Bar*/
-  .nav-container{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fce57c
-  }
-  .nav-bar{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 100%;
-  }
-  .nav-item{
-    border-right: 2px solid #007155;
-    display: block;
-    padding: 12px;
-    float: left;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  .nav-bar a{
-    display: block;
-    text-decoration: none; /* Remove underline */
-    color: #797575;
-  }
-  .nav-bar :hover{
-    background-color: rgb(83, 95, 80);
-    color: #FFD416;
+/*Navigation Bar*/
+.nav-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fce57c
+}
+.nav-bar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.nav-item{
+  border-right: 2px solid #007155;
+  display: block;
+  padding: 12px;
+  float: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav-bar a{
+  display: block;
+  text-decoration: none; /* Remove underline */
+  color: #797575;
+}
+.nav-bar :hover{
+  background-color: rgb(83, 95, 80);
+  color: #FFD416;
 
-  }
+}
 
-  .nav-item a:visited{
-    color: #538861;
-  }
+.nav-item a:visited{
+  color: #538861;
+}
