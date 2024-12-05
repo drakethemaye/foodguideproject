@@ -40,6 +40,7 @@ body{
   color: #538861;
 }
 
+/*TEAM SECTION*/
 /*needs to be centered*/
 #team-heading{
   display: flex;
@@ -54,6 +55,8 @@ body{
   height: 100vh;                  
   margin: 0; 
 }
+
+/*SPONSORS SECTION*/
 /*needs to be centered*/
 #sponsors-heading{
   text-align: center;

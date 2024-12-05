@@ -41,21 +41,41 @@ body{
     color: #538861;
   }
 
-  /*center items*/
-  
-  #restaurant-header{
-    justify-content: flex-start; 
-    align-items: center; 
-    text-align: center;
-  }
-  .restaurant-list{
-     text-align: center;        
-  }
-  .ranked-restaurants{
-    margin: 0;                    
-    padding: 0;                  
-    height: 100%;            
-    display: flex;                
-    justify-content: center;      
-    align-items: center;  
-  }
+  /*RESTAURANTS LIST*/
+
+/* Style for the entire container */
+.restaurant-container {
+  display: flex;                    
+  flex-direction: column;             
+  justify-content: center;          
+  align-items: center;               
+  height: 100vh;                      
+  text-align: center;                
+  padding: 20px;    
+  background-color: #007155;               
+}
+
+/* Style for the heading */
+#restaurant-header{
+  color: #FFD416; 
+  margin-top: 300px; 
+}
+h1{
+  font-size: 32px;
+}
+p{
+  font-size: 20px;
+}
+/* Style for the ranked list */
+.ranked-restaurants {
+  list-style-position: inside;        
+  padding: 0;                        
+  margin: 0;                        
+}
+/* Style for the list items */
+.ranked-restaurants li {
+  font-size: 18px;                    
+  color: #FFD416;                     
+  margin: 8px 0;                     
+}
+
