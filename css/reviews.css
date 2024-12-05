@@ -44,12 +44,11 @@ color: #FFD416
 }
 
 /*REVIEW SECTION*/
-
 .container {
   width: 80%;
   margin: 0 auto;
   padding: 20px;
-  background-color: white;
+  background-color: #f7efce;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -59,17 +58,16 @@ header {
   margin-bottom: 20px;
 }
 
-h1 {
-  color: #333;
-}
-
-h2 {
-  color: #555;
+h1, h2, p {
+  color: #007155;;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .review-form,
 .reviews {
   margin-bottom: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #007155;
 }
 
 textarea {
@@ -92,7 +90,7 @@ select, button {
 
 button {
   background-color: #4CAF50;
-  color: white;
+  color: #FFD416;
   border: none;
   cursor: pointer;
 }
