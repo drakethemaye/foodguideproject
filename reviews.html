@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+  <title>FAQ - FOOD GUIDE BURLY</title> 
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reviews.css">
+  <link rel="icon" href="images/favicon2.png" type="image/png">
+  
+</head>
+<body>
+  <!-- NAV BAR -->
+  <h2> - </h2>
+  <div class = "nav-container">
+      <ul class = "nav-bar">
+          <li class = "nav-item"> <a href="index.html">Home</a></li>
+          <li class = "nav-item"> <a href="contact.html">Contact</a></li>
+          <li class = "nav-item"> <a href="about.html">About Us</a> </li>
+          <li class = "nav-item"> <a href="reviews.html">Reviews</a></li>
+          <li class = "nav-item"> <a href="restaurants.html">Restaurants</a></li>
+      </ul>
+      </div>
+
+      <div class="container">
+          <header>
+              <h1>Leave a Review</h1>
+                <p>Rate and review your favorite Burlington restaurants!</p>
+            </header>
+    
+            <section class="review-form">
+                <h2>Give a Rating</h2>
+                <form id="review-form">
+                    <label for="rating">Rating:</label>
+                    <select id="rating" required>
+                        <option value="" disabled selected>Select a rating</option>
+                        <option value="1">1 Star</option>
+                        <option value="2">2 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="5">5 Stars</option>
+                    </select>
+                    <br>
+    
+                    <label for="review">Review:</label>
+                    <textarea id="review" required placeholder="Write your review here..."></textarea>
+                    <br>
+    
+                    <button type="submit">Submit Review</button>
+                </form>
+            </section>
+    
+            <section class="reviews">
+                <h2>User Reviews</h2>
+                <div id="reviews-list">
+                    <!-- Reviews will appear here -->
+                </div>
+            </section>
+        </div>
+    
+        <script src="js/script.js"></script>
+    </body>
+    </html>

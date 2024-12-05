@@ -41,25 +41,27 @@ body{
 }
 
 /*TEAM SECTION*/
-/*needs to be centered*/
 #team-heading{
   display: flex;
   justify-content: center;
+  font-size: 24px;
 }
 /*needs to be centered*/
 .team-member{
-  display: flex;                 
-  justify-content: center;        
-  align-items: center;            
-  gap: 20px;                      
-  height: 100vh;                  
-  margin: 0; 
+/* Container that holds the items */
+.container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px; 
+}
 }
 
 /*SPONSORS SECTION*/
 /*needs to be centered*/
 #sponsors-heading{
-  text-align: center;
+text-align: center;
+  font-size: 24px;
 }
 /*needs to be centered*/
 .sponsors-list{
