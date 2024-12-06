@@ -66,7 +66,8 @@ body{
 #contact-header{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #FFD416;
-  margin-top: 2%;
+  margin-top: -3%;
+  background-color: #4CAF50;
 }
 #contact-header p{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
