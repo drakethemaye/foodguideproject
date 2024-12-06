@@ -43,7 +43,8 @@ body{
 /*TEAM SECTION*/
 #team-heading{
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
+  margin-top: 5%;
 }
 p{
   font-size: 20px;
@@ -65,7 +66,8 @@ p{
 /*SPONSORS SECTION*/
 #sponsors-heading{
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
+  margin-top: 8%;
 }
 .sponsors-list{
   display: flex;                  

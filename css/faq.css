@@ -1,6 +1,7 @@
 body{
   background-color: #007155;
-  color: rgb(38, 36, 34);
+  color: #007155;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h1{
 font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -52,7 +53,11 @@ color: #FFD416
     border: 1px solid #ddd;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
+.title{
+  text-align: center;
+  font-size: 32px;
+  margin-top: 5%;
+}
 .column {
     flex: 1;
     padding: 20px;
@@ -66,7 +71,7 @@ color: #FFD416
 h2 {
     text-align: center;
     padding-bottom: 10px;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #007155;
     margin-bottom: 20px;
 }
 
@@ -76,7 +81,7 @@ p {
 }
 
 .questions {
-    background-color: #ffffff;
+    background-color: #fce57c;
 }
 
 .answers {

@@ -56,7 +56,7 @@ body{
 /* Style for the heading */
 #restaurant-header{ 
   color: #FFD416; 
-  margin: 50%;
+  margin-top: 40%;
 }
 h1{
   font-size: 32px;
