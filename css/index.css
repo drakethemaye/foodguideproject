@@ -51,13 +51,13 @@ h1{
 
 /* Style for the left list */
 .left-list {
-    width: 25%; /* Takes up 25% of the width */
-    background-color: #fce57c; /* Light gray background */
+    width: 25%; 
+    background-color: #fce57c; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #538861;
-    padding: 20px; /* Add some padding */
-    overflow-y: auto; /* Make it scrollable if content overflows */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    padding: 20px; 
+    overflow-y: auto; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
 }
 
 /* Style for the iframe */
