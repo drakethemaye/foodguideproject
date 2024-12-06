@@ -67,7 +67,6 @@ body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #FFD416;
   margin-top: -3%;
-  background-color: #4CAF50;
 }
 #contact-header p{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -76,13 +75,14 @@ body{
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
-  background-color: #f7efce;
+  background-color: #fce57c;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .form-group {
   margin-bottom: 20px;
+  margin-right: 20px;
 }
 label {
   font-size: 14px;
