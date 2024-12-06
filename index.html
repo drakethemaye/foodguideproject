@@ -17,13 +17,37 @@
             <li class = "nav-item"> <a href="faq.html">FAQ</a></li>
         </ul>
     </div>
+
+
     <h1>
         Welcome to Burlington, Vermont
     </h1>
+
+        <!-- FILTER CONTROLS -->
+        <div class="filter-container">
+            <h2>Filter Restaurants</h2>
+            <div>
+                <label for="distance-slider">Distance (miles): </label>
+                <input type="range" id="distance-slider" min="0" max="10" value="5" step=".1" onchange="updateDistanceFilter()">
+                <span id="distance-value">5</span> miles
+            </div>
+            <div>
+                <strong>Price Level:</strong>
+                <label><input type="checkbox" class="price-checkbox" value="$" onchange="applyFilters()"> $</label>
+                <label><input type="checkbox" class="price-checkbox" value="$$" onchange="applyFilters()"> $$</label>
+                <label><input type="checkbox" class="price-checkbox" value="$$$" onchange="applyFilters()"> $$$</label>
+            </div>
+            <div>
+                <label><input type="checkbox" id="filter-open-now" onchange="applyFilters()"> Open Now</label>
+            </div>
+            <button onclick="resetFilters()">Reset Filters</button>
+        </div>
+    
+
     <div class="content-container">
         <div class="left-list">
             <p>Browse local restaurants!</p>
-            <div class="restaurant-item">
+            <div class="restaurant-item" id="tinythai">
                 <h3>Tiny Thai Restaurant</h3>
                 <div>
                     <p>
@@ -37,11 +61,11 @@
                     </p>
                 </div>
             </div>
-            <div class="restaurant-item">
+            <div class="restaurant-item" id="onioncity">
                 <h3>Onion City Chicken & Oyster</h3>
                 <div>
                     <p>
-                    <span>Distance from UVM (miles): </span><span id="onioncityMiles">1.6</span>
+                    <span>Distance from UVM (miles): </span><span id="onioncityMiles">1</span>
                     </p>
                     <p>
                     <span>Price:</span> <span id="onioncityPrice">$$</span>
@@ -51,21 +75,21 @@
                     </p>
                 </div>
             </div>
-            <div class="restaurant-item">
+            <div class="restaurant-item" id="kismayokitchen">
                 <h3>Kismayo Kitchen</h3>
                 <div>
                     <p>
-                    <span>Distance from UVM (miles): </span><span id="kismayokitchenMiles">1.6</span>
+                    <span>Distance from UVM (miles): </span><span id="kismayokitchenMiles">2</span>
                     </p>
                     <p>
-                    <span>Price:</span> <span id="kismayokitchenPrice">$$</span>
+                    <span>Price:</span> <span id="kismayokitchenPrice">$$$</span>
                     </p>
                     <p>
                     <span>Open Now:</span> <span id="kismayokitchenOpen">yes</span>
                     </p>
                 </div>
             </div>
-            <div class="restaurant-item">
+            <div class="restaurant-item" id="tacogordo">
                 <h3>Taco Gordo</h3>
                 <div>
                     <p>
@@ -79,7 +103,7 @@
                     </p>
                 </div>
             </div>
-            <div class="restaurant-item">
+            <div class="restaurant-item" id="bistrodemargot">
                 <h3>Bistro de Margot</h3>
                 <div>
                     <p>
@@ -93,7 +117,7 @@
                     </p>
                 </div>
             </div>
-            <div class="restaurant-item">
+            <div class="restaurant-item" id="honeyroad">
                 <h3>Honey Road</h3>
                 <div>
                     <p>
@@ -107,7 +131,7 @@
                     </p>
                 </div>
             </div>
-            <div class="restaurant-item">
+            <div class="restaurant-item" id="augustfirst">
                 <h3>August First</h3>
                 <div>
                     <p>
@@ -121,7 +145,7 @@
                     </p>
                 </div>
             </div>
-            <div class="restaurant-item">
+            <div class="restaurant-item" id="pizzeriaverita">
                 <h3>Pizzeria Verita</h3>
                 <div>
                     <p>
@@ -135,7 +159,7 @@
                     </p>
                 </div>
             </div>
-            <div class="restaurant-item">
+            <div class="restaurant-item" id="wingsatmaple">
                 <h3>Wings at Maple</h3>
                 <div>
                     <p>
@@ -149,7 +173,7 @@
                     </p>
                 </div>
             </div>
-            <div class="restaurant-item">
+            <div class="restaurant-item" id="farmhouse">
                 <h3>Farmhouse Tap & Grill</h3>
                 <div>
                     <p>
@@ -163,21 +187,524 @@
                     </p>
                 </div>
             </div>
-            <div class="restaurant-item">
-                <h3>Farmhouse Tap & Grill</h3>
+            <div class="restaurant-item" id="zabbyandelfs">
+                <h3>Zabby & Elf’s Stone Soup</h3>
                 <div>
                     <p>
-                    <span>Distance from UVM (miles): </span><span id="farmhouseMiles">1.6</span>
+                    <span>Distance from UVM (miles): </span><span id="zabbyandelfsMiles">1.6</span>
                     </p>
                     <p>
-                    <span>Price:</span> <span id="farmhousePrice">$$</span>
+                    <span>Price:</span> <span id="zabbyandelfsPrice">$$</span>
                     </p>
                     <p>
-                    <span>Open Now:</span> <span id="farmhouseOpen">yes</span>
+                    <span>Open Now:</span> <span id="zabbyandelfsOpen">yes</span>
+                    </p>
+                </div>
+            </div>        
+            <div class="restaurant-item" id="roguerabbit">
+                <h3>Rogue Rabbit</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="roguerabbitMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="roguerabbitPrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="roguerabbitOpen">yes</span>
                     </p>
                 </div>
             </div>
-
+            <div class="restaurant-item" id="skinnypancake">
+                <h3>Skinny Pancake</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="skinnypancakeMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="skinnypancakePrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="skinnypancakeOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="bluenortheast">
+                <h3>Blue Northeast Kitchen</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="bluenortheastMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="bluenortheastPrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="bluenortheastOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="friendlytoast">
+                <h3>The Friendly Toast</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="friendlytoastMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="friendlytoastPrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="friendlytoastOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="shantyshore">
+                <h3>Shanty on the Shore</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="shantyshoreMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="shantyshorePrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="shantyshoreOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="leunigbistro">
+                <h3>Leunig's Bistro</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="leunigbistroMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="leunigbistroPrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="leunigbistroOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="poco">
+                <h3>Restaurant Poco</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="pocoMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="pocoPrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="pocoOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="cortijo">
+                <h3>El Cortijo Taqueria</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="cortijoMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="cortijoPrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="cortijoOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="bluebirdbarbecue">
+                <h3>Bluebird Barbeque</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="bluebirdbarbecueMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="bluebirdbarbecuePrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="bluebirdbarbecueOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="saromcafe">
+                <h3>Sarom's Cafe</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="saromcafeMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="saromcafePrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="saromcafeOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="asianbistro">
+                <h3>Asian Bistro</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="asianbistroMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="asianbistroPrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="asianbistroOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="mandarin">
+                <h3>Mandarin</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="mandarinMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="mandarinPrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="mandarinOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="waterworks">
+                <h3>Waterworks Food+Drink</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="waterworksMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="waterworksPrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="waterworksOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="mountainvalley">
+                <h3>Mountain Valley Restaurant</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="mountainvalleyMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="mountainvalleyPrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="mountainvalleyOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="grazerswinooski">
+                <h3>Grazers Winooski</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="grazerswinooskiMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="grazerswinooskiPrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="grazerswinooskiOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="ourhouse">
+                <h3>Our House Bistro</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="ourhouseMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="ourhousePrice">$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="ourhouseOpen">yes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="sneakers">
+                <h3>Sneakers Bistro</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="sneakersMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="sneakersPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="sneakersOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="mule">
+                <h3>Mule Bar</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="muleMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="mulePrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="muleOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="mckees">
+                <h3>McKee's Original</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="mckeesMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="mckeesPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="mckeesOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="jin">
+                <h3>Jin Chinese Restaurant</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="jinMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="jinPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="jinOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="papafranks">
+                <h3>Papa Frank's Italian Restaurant</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="papafranksMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="papafranksPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="papafranksOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="naguenos">
+                <h3>Naguenos Filipino American Diner</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="naguenosMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="naguenosPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="naguenosOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="vietthai">
+                <h3>Viet Thai</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="vietthaiMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="vietthaiPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="vietthaiOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="redpanda">
+                <h3>Red Panda Essex</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="redpandaMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="redpandaPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="redpandaOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="elgato">
+                <h3>El Gato Essex</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="elgatoMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="elgatoPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="elgatoOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="mediterano">
+                <h3>Cafe Mediterano</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="mediteranoMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="mediteranoPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="mediteranoOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="casagrande">
+                <h3>Casa Grande</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="casagrandeMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="casagrandePrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="casagrandeOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="scale">
+                <h3>The Scale</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="scaleMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="scalePrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="scaleOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="sakura">
+                <h3>Sakura Sushi & Kitchen</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="sakuraMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="sakuraPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="sakuraOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="pulcinellas">
+                <h3>Pulcinella’s</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="pulcinellasMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="pulcinellasPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="pulcinellasOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="zen">
+                <h3>Zen Gardens</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="zenMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="zenPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="zenOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="mamapho">
+                <h3>Mama Pho</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="mamaphoMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="mamaphoPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="mamaphoOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="madtaco">
+                <h3>The Mad Taco</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="madtacoMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="madtacoPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="madtacoOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="maliwan">
+                <h3>Maliwan Thai Restaurant</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="maliwanMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="maliwanPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="maliwanOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="parkplace">
+                <h3>Park Place Tavern</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="parkplaceMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="parkplacePrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="parkplaceOpen">No</span>
+                    </p>
+                </div>
+            </div>
+            <div class="restaurant-item" id="harts">
+                <h3>Hart’s Korean and Filipino</h3>
+                <div>
+                    <p>
+                    <span>Distance from UVM (miles): </span><span id="hartsMiles">1.6</span>
+                    </p>
+                    <p>
+                    <span>Price:</span> <span id="hartsPrice">$$$</span>
+                    </p>
+                    <p>
+                    <span>Open Now:</span> <span id="hartsOpen">No</span>
+                    </p>
+                </div>
+            </div>
 
         </div>
         <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dEXYF-B-lIQJs_g0L1iXI8knnLq00nI&ehbc=2E312F" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
