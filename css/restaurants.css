@@ -86,3 +86,7 @@ strong{
   color: #fce57c;                     
   margin: 8px 0;                     
 }
+ol > li::marker {
+  font-weight: bold;
+  font-size: 20px;
+}
