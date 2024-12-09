@@ -9,8 +9,6 @@ body{
   .nav-container{
     position: sticky;
     top: 0;
-    margin-left: 0;
-    margin-right: 0;
     width: 100%;
     background-color: #fce57c;
   }
