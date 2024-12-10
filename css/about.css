@@ -63,6 +63,10 @@ p{
   flex-direction: column;
   margin-top: 16px;
 }
+img{
+  width: 150px;
+  height: 150px;
+}
 
 /*SPONSORS SECTION*/
 #sponsors-heading{
