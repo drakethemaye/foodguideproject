@@ -9,8 +9,6 @@ body{
   .nav-container{
     position: sticky;
     top: 0;
-    margin-left: 0;
-    margin-right: 0;
     width: 100%;
     background-color: #fce57c;
   }
@@ -51,13 +49,13 @@ body{
   align-items: center;               
   text-align: center;                
   padding: 2%;    
-  background-color: #007155;               
+  background-color: #007155;            
 }
 
 /* Style for the heading */
 #restaurant-header{ 
   color: #FFD416; 
-  margin-top: 20%;
+  margin-top: 2%;
   background-color: #538861;
   padding-left: 2%;
   padding-right: 2%;
@@ -65,6 +63,7 @@ body{
 
 h1{
   font-size: 28px;
+  border: solid 2px #FFD416;
 }
 
 p{
@@ -86,4 +85,8 @@ strong{
   font-size: 16px;                    
   color: #fce57c;                     
   margin: 8px 0;                     
+}
+ol > li::marker {
+  font-weight: bold;
+  font-size: 20px;
 }
