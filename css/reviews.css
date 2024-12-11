@@ -46,7 +46,8 @@ color: #FFD416
 /*REVIEW SECTION*/
 .container {
   width: 80%;
-  margin: 0 auto;
+  margin: auto;
+  margin-top: 5%;
   padding: 20px;
   background-color: #00503d;
   border-radius: 8px;
