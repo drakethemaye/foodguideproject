@@ -2,11 +2,11 @@
 document.getElementById("review-form").addEventListener("submit", function (event) {
   event.preventDefault();
 
-  // Get the user's rating and review
+  // Get user inputs
   const rating = document.getElementById("rating").value.trim();
   const reviewText = document.getElementById("review").value.trim();
+  const photoFile = document.getElementById("photo").files[0];
 
-  // Validation: Ensure both fields are filled out
   if (!rating || !reviewText) {
     alert("Please fill out both the rating and the review.");
     return;
@@ -16,26 +16,44 @@ document.getElementById("review-form").addEventListener("submit", function (even
   const reviewElement = document.createElement("div");
   reviewElement.classList.add("review");
 
-  // Add the rating stars
+  // Add rating stars
   const ratingElement = document.createElement("div");
   ratingElement.classList.add("rating");
   ratingElement.innerHTML = `Rating: ${"⭐".repeat(parseInt(rating))}`;
+  reviewElement.appendChild(ratingElement);
 
-  // Add the review text
+  // Add review text
   const reviewContentElement = document.createElement("p");
   reviewContentElement.classList.add("review-text");
   reviewContentElement.innerText = reviewText;
-
-  // Append the rating and review content to the review element
-  reviewElement.appendChild(ratingElement);
   reviewElement.appendChild(reviewContentElement);
 
-  // Add the review element to the reviews list
+  // Add photo if uploaded
+  if (photoFile) {
+    const photoElement = document.createElement("img");
+    photoElement.src = URL.createObjectURL(photoFile);
+    photoElement.alt = "Uploaded review photo";
+    photoElement.classList.add("review-photo");
+    reviewElement.appendChild(photoElement);
+  }
+
+  // Append the new review to the reviews list
   document.getElementById("reviews-list").appendChild(reviewElement);
+
+  // Add the review to "Recent Reviews"
+  const recentReviewsContainer = document.getElementById("recent-reviews");
+  recentReviewsContainer.prepend(reviewElement.cloneNode(true));
 
   // Reset the form
   document.getElementById("review-form").reset();
-
-  // Optional: Success message
-  alert("Thank you for your review!");
 });
+
+// MOST HELPFUL REVIEWS (Static Example for Now)
+const mostHelpfulReviewsContainer = document.getElementById("most-helpful-reviews");
+// Example of adding a static helpful review
+mostHelpfulReviewsContainer.innerHTML = `
+  <div class="review">
+    <div class="rating">Rating: ⭐⭐⭐⭐⭐</div>
+    <p class="review-text">This place has the best pancakes I've ever had! Highly recommended.</p>
+  </div>
+`;
