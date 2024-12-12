@@ -69,6 +69,34 @@ img{
   border: solid 3px #fce57c;
 }
 
+#local-food-history {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.history-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.history-container h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.history-container p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+
 /*SPONSORS SECTION*/
 #sponsors-heading{
   text-align: center;
