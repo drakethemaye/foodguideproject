@@ -90,3 +90,45 @@ ol > li::marker {
   font-weight: bold;
   font-size: 20px;
 }
+
+#deals-section {
+  background-color: #538861; /* Matches restaurant list background */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#deals-section h2 {
+  color: #FFD416;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#deals-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.deal {
+  background-color: #fce57c;
+  border: 2px solid #007155;
+  border-radius: 8px;
+  padding: 15px;
+  width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.deal h3 {
+  margin: 0;
+  color: #007155;
+  font-size: 18px;
+}
+
+.deal p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #333;
+}
